@@ -25,7 +25,7 @@ var DirectionsAndCall = React.createClass({
         var userLocation = this.props.userLocation;
         // var selectedShopAddress = this.props.selectedShop.formatted_address.split(' ').join('+');
 
-        var directions = 'http://maps.google.com/?saddr='
+        var directions = 'https://www.google.com/maps/d/u/0/viewer?msa=0&mid=1wtdlAk8QjntMdXsQM1VzzPmQXTY&ll=37.99285953591594%2C-122.09891949999998&z=10'
 
 
         return (

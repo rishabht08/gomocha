@@ -6,27 +6,72 @@ import Footer from '../../DashboardView/Footer/Footer';
 import { Link } from 'react-router';
 import './confirmation-view.scss';
 import '../../App/app.scss';
+import shops from "../../../../dummy-shop-data.json"
 
 var ConfirmationView = React.createClass({
 
-    propTypes: {
-        methodOfTrans: React.PropTypes.string,
-        pickupTime: React.PropTypes.oneOfType([
-            React.PropTypes.string,
-            React.PropTypes.bool
-        ]),
-        duration: React.PropTypes.string,
-        selectedShop: React.PropTypes.object,
-        distance: React.PropTypes.string,
-        userLocation: React.PropTypes.shape({
-            lat: React.PropTypes.number,
-            lng: React.PropTypes.number
-        }),
-        selectedShopLocation: React.PropTypes.shape({
-            lat: React.PropTypes.number,
-            lng: React.PropTypes.number
-        }),
-        expectedPickupTime: React.PropTypes.string
+    // propTypes: {
+    //     methodOfTrans: React.PropTypes.string,
+    //     pickupTime: React.PropTypes.oneOfType([
+    //         React.PropTypes.string,
+    //         React.PropTypes.bool
+    //     ]),
+    //     duration: React.PropTypes.string,
+    //     selectedShop: React.PropTypes.object,
+    //     distance: React.PropTypes.string,
+    //     userLocation: React.PropTypes.shape({
+    //         lat: React.PropTypes.number,
+    //         lng: React.PropTypes.number
+    //     }),
+    //     selectedShopLocation: React.PropTypes.shape({
+    //         lat: React.PropTypes.number,
+    //         lng: React.PropTypes.number
+    //     }),
+    //     expectedPickupTime: React.PropTypes.string
+    // },
+    
+    getInitialState: function () {
+        return {
+            username: '',
+            userLocation: {
+                lat: '',
+                lng: ''
+            },
+            shops: [],
+            selectedShop: {},
+            selectedShopLocation: {
+                lat: '',
+                lng: ''
+            },
+            distance: '',
+            duration: '',
+            durationSeconds: undefined,
+            items: [],
+            specialInstructions: '',
+            notification: {
+                add: false,
+                delete: false,
+                error: false,
+                form: false,
+                additionalInfo: false,
+                userLocation: false
+            },
+            methodOfTrans: '',
+            methodOfTransShow: true,
+            pickupTime: true,
+            expectedPickupTime: '',
+            favorite: false,
+            paymentInfo: {
+                nameOnCard: '',
+                cardNumber: undefined,
+                expMonth: '',
+                expYear: '',
+                cvv: undefined
+            },
+            previousOrders: [],
+            favoriteOrders: [],
+            menuShow: false,
+        }
     },
 
     render: function() {
@@ -41,16 +86,16 @@ var ConfirmationView = React.createClass({
                     </div>
 
                     <OrderReadyTime
-                    methodOfTrans={this.props.methodOfTrans}
-                    pickupTime={this.props.pickupTime}
-                    duration={this.props.duration} />
+                    methodOfTrans={this.state.methodOfTrans}
+                    pickupTime={this.state.pickupTime}
+                    duration={this.state.duration} />
                     <ShopDetails
-                    selectedShop={this.props.selectedShop}
-                    distance={this.props.distance} />
+                    selectedShop={shops[2]}
+                    distance={this.state.distance} />
                     <DirectionsAndCall
-                    selectedShop={this.props.selectedShop}
-                    userLocation={this.props.userLocation}
-                    selectedShopLocation={this.props.selectedShopLocation} />
+                    selectedShop={shops[2]}
+                    userLocation={this.state.userLocation}
+                    selectedShopLocation="San Francisco" />
                 </div>
                     <Link to="/" className="back-to-dashboard">
                         <button className="next-button">

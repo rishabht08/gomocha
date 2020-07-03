@@ -54,7 +54,7 @@ var SelectShopView = React.createClass({
                     <QRCode value="https://gomocha.netlify.app/custom-order" size={512} />
                 </div>
 
-                <div className="main-wrap">
+                {/* <div className="main-wrap">
                     <div>
                         <div className="loading-icon">{loadingIcon}</div>
                         <ShopList
@@ -62,7 +62,7 @@ var SelectShopView = React.createClass({
                             handleSelectedShop={this.props.handleSelectedShop} />
                     
                     </div>;
-                </div>
+                </div> */}
                 <Footer />
             </div>
         )
