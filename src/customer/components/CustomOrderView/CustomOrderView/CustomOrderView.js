@@ -75,6 +75,8 @@ var CustomOrderView = React.createClass({
     componentWillMount(){
         let userName = cookie.get("username") ? cookie.get("username") : "Guest" ;
 
+        console.log("username--->" , JSON.parse(cookie.get("dining")))
+
         this.setState({
             username:userName
         })
@@ -175,7 +177,7 @@ var CustomOrderView = React.createClass({
     render: function() {
 
         var nextButton;
-        console.log("items content" , this.props.items)
+        
         if (this.state.items.length > 0) {
             nextButton = <Link to={{pathname:"/additional-info", state: { items: this.state.items }}} >
                             <button className="next-button">

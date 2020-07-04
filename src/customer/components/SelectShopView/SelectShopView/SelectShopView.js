@@ -16,12 +16,12 @@ var SelectShopView = React.createClass({
 
     render: function () {
 
-        var loadingIcon;
-        if (this.props.shops.length === 0) {
-            loadingIcon = <i className="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom"></i>;
-        } else if (this.props.shops.length > 0) {
-            loadingIcon = <i className="hide fa-spinner fa-spin fa-3x fa-fw margin-bottom"></i>;
-        }
+        // var loadingIcon;
+        // if (this.props.shops.length === 0) {
+        //     loadingIcon = <i className="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom"></i>;
+        // } else if (this.props.shops.length > 0) {
+        //     loadingIcon = <i className="hide fa-spinner fa-spin fa-3x fa-fw margin-bottom"></i>;
+        // }
 
         var content;
         // if (!this.props.notification.userLocation) {
@@ -42,16 +42,16 @@ var SelectShopView = React.createClass({
         return (
             <div className="select-shop-container">
 
-                <div className="title-cover">
+                {/* <div className="title-cover">
                     <h1>Select a Shop</h1>
                     <div className="userProgress">
                         <div id="oneOfFive">
                         </div>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="random" style={{width:"100%" , "text-align":"center"}}>
-                    <QRCode value="https://gomocha.netlify.app/custom-order" size={512} />
+                <div className="random" style={{width:"100%" , "text-align":"center" , "marginTop":"2%"}}>
+                    <QRCode value="https://gomocha.netlify.app" size={700} />
                 </div>
 
                 {/* <div className="main-wrap">
@@ -63,7 +63,7 @@ var SelectShopView = React.createClass({
                     
                     </div>;
                 </div> */}
-                <Footer />
+                {/* <Footer /> */}
             </div>
         )
     }

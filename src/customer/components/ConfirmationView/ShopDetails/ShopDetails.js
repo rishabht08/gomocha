@@ -1,5 +1,6 @@
 import React from 'react';
 import './shop-details.scss';
+import cookie from 'js-cookie';
 
 var ShopDetails = React.createClass({
 
@@ -10,17 +11,20 @@ var ShopDetails = React.createClass({
 
     render: function () {
 
-        console.log("prop" , this.props.selectedShop)
+        console.log("prop", this.props.selectedShop)
+        let dining = JSON.parse(cookie.get("dining"))
 
-        var selectedShop = this.props.selectedShop;
+
+        // var selectedShop = this.props.selectedShop;
+
 
         return (
             <div className="shop-details-container">
-                <h2>{selectedShop.name}</h2>
-                <p>{selectedShop.vicinity}</p>
+                <h2>{dining.name}</h2>
+                <p>"28 6th St, San Francisco"</p>
 
-                <p>{selectedShop.rating}</p>
-                <img src={selectedShop.icon}/>
+                <p>{dining.rating}</p>
+                <img src={dining.photo} />
                 <p>Distance: 0.5 mi</p>
             </div>
         )

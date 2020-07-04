@@ -15,18 +15,21 @@ import BusinessAdminView from './business-admin/components/BusinessAdminView/Bus
 
 var Routes = <div> <Route path="/" component={App}>
     <IndexRoute component={DashboardView} />
-    <Route path="select-shop" component={SelectShopView} />
+
     <Route path="previous-orders" component={PreviousOrdersView} />
     <Route path="favorite-orders" component={FavoriteOrdersView} />
+    <Route path="/custom-order" component={CustomOrderView} />
+    <Route path="additional-info" component={AdditionalInfoView} />
+    <Route path="order-summary" component={OrderSummaryView} />
+    <Route path="confirmation" component={ConfirmationView} />
 
 </Route>
     <Route path="/admin" component={AppBusiness}>
         <IndexRoute component={BusinessAdminView} />
     </Route>
-    <Route path="/custom-order" component={CustomOrderView} />
-    <Route path="additional-info" component={AdditionalInfoView} />
-    <Route path="order-summary" component={OrderSummaryView} />
-    <Route path="confirmation" component={ConfirmationView} />
+
+    <Route path="select-shop" component={SelectShopView} />
+
 
 
 

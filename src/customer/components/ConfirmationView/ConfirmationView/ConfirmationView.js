@@ -7,6 +7,7 @@ import { Link } from 'react-router';
 import './confirmation-view.scss';
 import '../../App/app.scss';
 import shops from "../../../../dummy-shop-data.json"
+import cookie from 'js-cookie';
 
 var ConfirmationView = React.createClass({
 

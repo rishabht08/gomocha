@@ -109,6 +109,7 @@ var OrderSummaryView = React.createClass({
                 if (err) {
                     console.log(err);
                 }
+                console.log("submit ordder" , res)
             })
         this._handleStateClear();
     },

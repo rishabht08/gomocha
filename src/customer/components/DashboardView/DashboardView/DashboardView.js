@@ -4,7 +4,8 @@ import { Link } from 'react-router';
 import '../../App/app.scss';
 import './dashboard-view.scss';
 import Swal from "sweetalert2"
-
+import axios from "axios";
+import cookie from 'js-cookie';
 var DashboardView = React.createClass({
 
     propTypes: {
@@ -25,24 +26,42 @@ var DashboardView = React.createClass({
           }).then((result) => {
             if (result.value) {
                 Swal.fire({
-                    input: 'text',
+                    input: 'number',
                     inputPlaceholder: 'Members?',
+                    inputValue:1,
                     title: 'How many member?',
                     text: "Availability",
                     icon: 'warning',
                     showCancelButton: true,
-                    cancelButtonText: 'Yes!',
+                    confirmButtonText: 'Confirm',
                     confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'No!'
+                    cancelButtonColor: '#d33'
+                   
                   }).then((result) => {
                     if (result.value) {
-                      Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success',
-                        
-                      )
+
+                        axios.get("http://13.127.237.253:5000/api/v1/info").then(res=>{
+                            console.log("response" , res.data.data.details[2])
+                            const seatsAvailable = res.data.data.details[2].seats.seatsAvailable;
+                            if(seatsAvailable < result.value){
+                                Swal.fire(
+                                    'Sorry',
+                                    'Please Wait for some time for the seats to be available',
+                                    'warning',
+                                    
+                                  )
+
+                            }
+                            else{
+                                cookie.set('dining', res.data.data.details[2])
+                                window.location.href = "/custom-order"
+
+                            }
+                        })
+
+
+                     
+                   
                     }
                   })
                   
