@@ -16,8 +16,6 @@ import BusinessAdminView from './business-admin/components/BusinessAdminView/Bus
 var Routes = <div> <Route path="/" component={App}>
     <IndexRoute component={DashboardView} />
     <Route path="select-shop" component={SelectShopView} />
- 
-
     <Route path="previous-orders" component={PreviousOrdersView} />
     <Route path="favorite-orders" component={FavoriteOrdersView} />
 
