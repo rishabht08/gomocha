@@ -13,6 +13,7 @@ import AppBusiness from './business-admin/components/App'
 import BusinessAdminView from './business-admin/components/BusinessAdminView/BusinessAdminView/BusinessAdminView'
 
 
+
 var Routes = <div> <Route path="/" component={App}>
     <IndexRoute component={DashboardView} />
 
@@ -24,7 +25,10 @@ var Routes = <div> <Route path="/" component={App}>
     <Route path="confirmation" component={ConfirmationView} />
 
 </Route>
-    <Route path="/admin" component={AppBusiness}>
+    {/* <Route path="/admin" component={AppBusiness}>
+        <IndexRoute component={BusinessAdminView} />
+    </Route> */}
+      <Route path="/admin" component={AppBusiness}>
         <IndexRoute component={BusinessAdminView} />
     </Route>
 

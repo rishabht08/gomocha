@@ -3,6 +3,7 @@ import OrderTotalRow from '../OrderTotalRow/OrderTotalRow';
 import OrderTax from '../OrderTax/OrderTax';
 import OrderTotalTotal from '../OrderTotalTotal/OrderTotalTotal';
 import './order-total.scss';
+import cookie from 'js-cookie';
 
 var OrderTotal = React.createClass({
 
@@ -33,6 +34,7 @@ var OrderTotal = React.createClass({
             sum + (current.price * current.quantity), 0);
         var orderTax = (total * 0.1);
         var orderTotal = (total + orderTax).toFixed(2);
+        cookie.set("amount" , orderTotal)
 
         return (
             <div>

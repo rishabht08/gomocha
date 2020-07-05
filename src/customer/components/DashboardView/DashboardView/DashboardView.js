@@ -54,6 +54,7 @@ var DashboardView = React.createClass({
                             }
                             else{
                                 cookie.set('dining', res.data.data.details[2])
+                                cookie.set("seatNumber" , result.value)
                                 window.location.href = "/custom-order"
 
                             }

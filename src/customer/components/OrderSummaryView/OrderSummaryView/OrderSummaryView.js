@@ -8,6 +8,8 @@ import './order-summary.scss';
 import request from "superagent"
 import _ from 'lodash';
 import moment from "moment"
+import axios from "axios"
+import cookie from 'js-cookie';
 
 var OrderSummaryView = React.createClass({
 
@@ -88,29 +90,44 @@ var OrderSummaryView = React.createClass({
         var date = moment().format('l');
         var time = moment().format('LT');
 
-        request.post('/api/orders')
-            .set('Content-Type', 'application/json')
-            .send({
-                username: this.state.username,
-                items: this.state.items,
-                specialInstructions: this.state.specialInstructions,
-                selectedShop: this.state.selectedShop.name,
-                selectedShop_id: this.state.selectedShop.place_id,
-                favorited: this.state.favorite,
-                date: date,
-                time: time,
-                timeUntilArrival: this.state.duration,
-                secondsUntilArrival: this.state.durationSeconds,
-                timeSelectedForPickup: this.state.pickupTime,
-                expectedPickupTime: expectedPickupTime,
-                completed: false
-            })
-            .end(function (err, res) {
-                if (err) {
-                    console.log(err);
-                }
-                console.log("submit ordder" , res)
-            })
+        // request.post('/api/orders')
+        //     .set('Content-Type', 'application/json')
+        //     .send({
+        //         username: this.state.username,
+        //         items: this.state.items,
+        //         specialInstructions: this.state.specialInstructions,
+        //         selectedShop: this.state.selectedShop.name,
+        //         selectedShop_id: this.state.selectedShop.place_id,
+        //         favorited: this.state.favorite,
+        //         date: date,
+        //         time: time,
+        //         timeUntilArrival: this.state.duration,
+        //         secondsUntilArrival: this.state.durationSeconds,
+        //         timeSelectedForPickup: this.state.pickupTime,
+        //         expectedPickupTime: expectedPickupTime,
+        //         completed: false
+        //     })
+        //     .end(function (err, res) {
+        //         if (err) {
+        //             console.log(err);
+        //         }
+        //         console.log("submit ordder" , res)
+        //     })
+
+        const data = {
+            "transaction_id" : "BRN1079",
+            "amount": parseInt(cookie.get("amount")),
+            "isCashOnDelivery": true,
+            "isPaymentReceived": false,
+            "isDelivered": false,
+            "noOfSeatsConfirmed": parseInt(cookie.get("seatNumber"))
+        }
+
+        axios.post("http://13.127.237.253:5000/api/v1/orders/" , data).then(res=>{
+            console.log("afeter submit" , res)
+            window.location.href = "/confirmation"
+        })
+
         this._handleStateClear();
     },
 
@@ -155,14 +172,14 @@ var OrderSummaryView = React.createClass({
                 <SpecialInstructionsOS
                     specialInstructions={this.state.specialInstructions} />
 
-                <Link to="/confirmation" className="order-summary-link">
+                <div  className="order-summary-link">
                     <button
                         onClick={this.handleOrderSubmit}
                         className="next-button order-summary-button">
                             Submit Order
                             <i className="fa fa-check fa-lg" aria-hidden="true"></i>
                     </button>
-                </Link>
+                </div>
 
                 <Link to="/custom-order">
                     <button className="next-button order-summary-edit-button">
