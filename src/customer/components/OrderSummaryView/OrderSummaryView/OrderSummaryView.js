@@ -66,6 +66,8 @@ var OrderSummaryView = React.createClass({
 
     componentWillMount(){
 
+        console.log("fsfsf",cookie.get("items"))
+
         this.setState({
             items: this.props.location.state ? this.props.location.state.items : [] 
         })
@@ -115,16 +117,27 @@ var OrderSummaryView = React.createClass({
         //         console.log("submit ordder" , res)
         //     })
 
+        let arr = []
+
+        this.props.location.state.items.forEach(item=>{
+            let data = {}
+            data.item = item.itemName
+            data.quantity = item.quantity
+
+            arr.push(data)
+        })
+
         const data = {
-            "transaction_id" : "BRN1079",
-            "amount": parseInt(cookie.get("amount")),
+            "price": parseInt(cookie.get("amount")),
             "isCashOnDelivery": true,
             "isPaymentReceived": false,
             "isDelivered": false,
-            "noOfSeatsConfirmed": parseInt(cookie.get("seatNumber"))
+            "noOfSeatsRequested": parseInt(cookie.get("seatNumber")),
+            "username": cookie.get("username"),
+            "orders" : arr
         }
 
-        axios.post("http://13.127.237.253:5000/api/v1/orders/" , data).then(res=>{
+        axios.post("http://13.127.237.253:5000/api/v1/customer-order/create-order" , data).then(res=>{
             console.log("afeter submit" , res)
             window.location.href = "/confirmation"
         })

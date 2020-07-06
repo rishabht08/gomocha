@@ -14,31 +14,37 @@
                             "name": "Latte",
                             "price": 2.95,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "latte"
+                            "item": "latte"
+                       
+                            
                         },
                         {
                             "name": "Americano",
                             "price": 2.50,
                             "options": ["size", "quantity", "decaf"],
-                            "id": "americano"
+                            "item": "americano"
+                           
                         },
                         {
                             "name": "Cappucino",
                             "price": 3.05,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "cappucino"
+                            "item": "cappucino"
+                  
                         },
                         {
                             "name": "Espresso",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "espresso"
+                            "item": "espresso"
+                            
                         },
                         {
                             "name": "Macchiato",
                             "price": 3.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "macchiato"
+                            "item": "macchiato",
+                            "name": "Latte"
                         }
                     ]
                 },
@@ -51,31 +57,31 @@
                             "name": "Iced Latte",
                             "price": 2.95,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-latte"
+                            "item": "iced-latte"
                         },
                         {
                             "name": "Iced Mocha",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-mocha"
+                            "item": "iced-mocha"
                         },
                         {
                             "name": "Iced Chai",
                             "price": 3.05,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-chai"
+                            "item": "iced-chai"
                         },
                         {
                             "name": "Iced Coffee",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": ""
+                            "item": ""
                         },
                         {
                             "name": "Frappe",
                             "price": 3.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "frappe"
+                            "item": "frappe"
                         }
                     ]
                 },
@@ -88,31 +94,31 @@
                             "name": "Green",
                             "price": 2.95,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "green"
+                            "item": "green"
                         },
                         {
                             "name": "Jasmine Green",
                             "price": 2.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "jasmine-green"
+                            "item": "jasmine-green"
                         },
                         {
                             "name": "Chai",
                             "price": 3.05,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "chai"
+                            "item": "chai"
                         },
                         {
                             "name": "Mint",
                             "price": 2.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "mint"
+                            "item": "mint"
                         },
                         {
                             "name": "Chamomile",
                             "price": 3.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "chamomile"
+                            "item": "chamomile"
                         }
                     ]
                 },
@@ -125,31 +131,31 @@
                             "name": "Croissant",
                             "price": 2.95,
                             "options": ["quantity"],
-                            "id": "croissant"
+                            "item": "croissant"
                         },
                         {
                             "name": "Banana Muffin",
                             "price": 2.50,
                             "options": ["quantity"],
-                            "id": "banana-muffin"
+                            "item": "banana-muffin"
                         },
                         {
                             "name": "Blueberry Scone",
                             "price": 3.05,
                             "options": ["quantity"],
-                            "id": "blueberry-scone"
+                            "item": "blueberry-scone"
                         },
                         {
                             "name": "Carrot Cake",
                             "price": 2.50,
                             "options": ["quantity"],
-                            "id": "carrot-cake"
+                            "item": "carrot-cake"
                         },
                         {
                             "name": "Home-Made Cookies",
                             "price": 3.50,
                             "options": ["quantity"],
-                            "id": "home-made-cookies"
+                            "item": "home-made-cookies"
                         }
                     ]
                 }
@@ -169,31 +175,31 @@
                             "name": "Latte",
                             "price": 2.95,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "latte"
+                            "item": "latte"
                         },
                         {
                             "name": "Americano",
                             "price": 2.50,
                             "options": ["size", "quantity", "decaf"],
-                            "id": "americano"
+                            "item": "americano"
                         },
                         {
                             "name": "Cappucino",
                             "price": 3.05,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "cappucino"
+                            "item": "cappucino"
                         },
                         {
                             "name": "Espresso",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "espresso"
+                            "item": "espresso"
                         },
                         {
                             "name": "Macchiato",
                             "price": 3.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "macchiato"
+                            "item": "macchiato"
                         }
                     ]
                 },
@@ -206,31 +212,31 @@
                             "name": "Iced Latte",
                             "price": 2.95,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-latte"
+                            "item": "iced-latte"
                         },
                         {
                             "name": "Iced Mocha",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-mocha"
+                            "item": "iced-mocha"
                         },
                         {
                             "name": "Iced Chai",
                             "price": 3.05,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-chai"
+                            "item": "iced-chai"
                         },
                         {
                             "name": "Iced Coffee",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": ""
+                            "item": ""
                         },
                         {
                             "name": "Frappe",
                             "price": 3.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "frappe"
+                            "item": "frappe"
                         }
                     ]
                 },
@@ -243,31 +249,31 @@
                             "name": "Green",
                             "price": 2.95,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "green"
+                            "item": "green"
                         },
                         {
                             "name": "Jasmine Green",
                             "price": 2.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "jasmine-green"
+                            "item": "jasmine-green"
                         },
                         {
                             "name": "Chai",
                             "price": 3.05,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "chai"
+                            "item": "chai"
                         },
                         {
                             "name": "Mint",
                             "price": 2.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "mint"
+                            "item": "mint"
                         },
                         {
                             "name": "Chamomile",
                             "price": 3.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "chamomile"
+                            "item": "chamomile"
                         }
                     ]
                 },
@@ -280,31 +286,31 @@
                             "name": "Croissant",
                             "price": 2.95,
                             "options": ["quantity"],
-                            "id": "croissant"
+                            "item": "croissant"
                         },
                         {
                             "name": "Banana Muffin",
                             "price": 2.50,
                             "options": ["quantity"],
-                            "id": "banana-muffin"
+                            "item": "banana-muffin"
                         },
                         {
                             "name": "Blueberry Scone",
                             "price": 3.05,
                             "options": ["quantity"],
-                            "id": "blueberry-scone"
+                            "item": "blueberry-scone"
                         },
                         {
                             "name": "Carrot Cake",
                             "price": 2.50,
                             "options": ["quantity"],
-                            "id": "carrot-cake"
+                            "item": "carrot-cake"
                         },
                         {
                             "name": "Home-Made Cookies",
                             "price": 3.50,
                             "options": ["quantity"],
-                            "id": "home-made-cookies"
+                            "item": "home-made-cookies"
                         }
                     ]
                 }
@@ -324,31 +330,31 @@
                             "name": "Latte",
                             "price": 2.95,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "latte"
+                            "item": "latte"
                         },
                         {
                             "name": "Americano",
                             "price": 2.50,
                             "options": ["size", "quantity", "decaf"],
-                            "id": "americano"
+                            "item": "americano"
                         },
                         {
                             "name": "Cappucino",
                             "price": 3.05,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "cappucino"
+                            "item": "cappucino"
                         },
                         {
                             "name": "Espresso",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "espresso"
+                            "item": "espresso"
                         },
                         {
                             "name": "Macchiato",
                             "price": 3.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "macchiato"
+                            "item": "macchiato"
                         }
                     ]
                 },
@@ -361,31 +367,31 @@
                             "name": "Iced Latte",
                             "price": 2.95,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-latte"
+                            "item": "iced-latte"
                         },
                         {
                             "name": "Iced Mocha",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-mocha"
+                            "item": "iced-mocha"
                         },
                         {
                             "name": "Iced Chai",
                             "price": 3.05,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-chai"
+                            "item": "iced-chai"
                         },
                         {
                             "name": "Iced Coffee",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": ""
+                            "item": ""
                         },
                         {
                             "name": "Frappe",
                             "price": 3.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "frappe"
+                            "item": "frappe"
                         }
                     ]
                 },
@@ -398,31 +404,31 @@
                             "name": "Green",
                             "price": 2.95,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "green"
+                            "item": "green"
                         },
                         {
                             "name": "Jasmine Green",
                             "price": 2.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "jasmine-green"
+                            "item": "jasmine-green"
                         },
                         {
                             "name": "Chai",
                             "price": 3.05,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "chai"
+                            "item": "chai"
                         },
                         {
                             "name": "Mint",
                             "price": 2.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "mint"
+                            "item": "mint"
                         },
                         {
                             "name": "Chamomile",
                             "price": 3.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "chamomile"
+                            "item": "chamomile"
                         }
                     ]
                 },
@@ -435,31 +441,31 @@
                             "name": "Croissant",
                             "price": 2.95,
                             "options": ["quantity"],
-                            "id": "croissant"
+                            "item": "croissant"
                         },
                         {
                             "name": "Banana Muffin",
                             "price": 2.50,
                             "options": ["quantity"],
-                            "id": "banana-muffin"
+                            "item": "banana-muffin"
                         },
                         {
                             "name": "Blueberry Scone",
                             "price": 3.05,
                             "options": ["quantity"],
-                            "id": "blueberry-scone"
+                            "item": "blueberry-scone"
                         },
                         {
                             "name": "Carrot Cake",
                             "price": 2.50,
                             "options": ["quantity"],
-                            "id": "carrot-cake"
+                            "item": "carrot-cake"
                         },
                         {
                             "name": "Home-Made Cookies",
                             "price": 3.50,
                             "options": ["quantity"],
-                            "id": "home-made-cookies"
+                            "item": "home-made-cookies"
                         }
                     ]
                 }
@@ -479,31 +485,31 @@
                             "name": "Latte",
                             "price": 2.95,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "latte"
+                            "item": "latte"
                         },
                         {
                             "name": "Americano",
                             "price": 2.50,
                             "options": ["size", "quantity", "decaf"],
-                            "id": "americano"
+                            "item": "americano"
                         },
                         {
                             "name": "Cappucino",
                             "price": 3.05,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "cappucino"
+                            "item": "cappucino"
                         },
                         {
                             "name": "Espresso",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "espresso"
+                            "item": "espresso"
                         },
                         {
                             "name": "Macchiato",
                             "price": 3.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "macchiato"
+                            "item": "macchiato"
                         }
                     ]
                 },
@@ -516,31 +522,31 @@
                             "name": "Iced Latte",
                             "price": 2.95,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-latte"
+                            "item": "iced-latte"
                         },
                         {
                             "name": "Iced Mocha",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-mocha"
+                            "item": "iced-mocha"
                         },
                         {
                             "name": "Iced Chai",
                             "price": 3.05,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-chai"
+                            "item": "iced-chai"
                         },
                         {
                             "name": "Iced Coffee",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": ""
+                            "item": ""
                         },
                         {
                             "name": "Frappe",
                             "price": 3.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "frappe"
+                            "item": "frappe"
                         }
                     ]
                 },
@@ -553,31 +559,31 @@
                             "name": "Green",
                             "price": 2.95,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "green"
+                            "item": "green"
                         },
                         {
                             "name": "Jasmine Green",
                             "price": 2.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "jasmine-green"
+                            "item": "jasmine-green"
                         },
                         {
                             "name": "Chai",
                             "price": 3.05,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "chai"
+                            "item": "chai"
                         },
                         {
                             "name": "Mint",
                             "price": 2.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "mint"
+                            "item": "mint"
                         },
                         {
                             "name": "Chamomile",
                             "price": 3.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "chamomile"
+                            "item": "chamomile"
                         }
                     ]
                 },
@@ -590,31 +596,31 @@
                             "name": "Croissant",
                             "price": 2.95,
                             "options": ["quantity"],
-                            "id": "croissant"
+                            "item": "croissant"
                         },
                         {
                             "name": "Banana Muffin",
                             "price": 2.50,
                             "options": ["quantity"],
-                            "id": "banana-muffin"
+                            "item": "banana-muffin"
                         },
                         {
                             "name": "Blueberry Scone",
                             "price": 3.05,
                             "options": ["quantity"],
-                            "id": "blueberry-scone"
+                            "item": "blueberry-scone"
                         },
                         {
                             "name": "Carrot Cake",
                             "price": 2.50,
                             "options": ["quantity"],
-                            "id": "carrot-cake"
+                            "item": "carrot-cake"
                         },
                         {
                             "name": "Home-Made Cookies",
                             "price": 3.50,
                             "options": ["quantity"],
-                            "id": "home-made-cookies"
+                            "item": "home-made-cookies"
                         }
                     ]
                 }
@@ -634,31 +640,31 @@
                             "name": "Latte",
                             "price": 2.95,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "latte"
+                            "item": "latte"
                         },
                         {
                             "name": "Americano",
                             "price": 2.50,
                             "options": ["size", "quantity", "decaf"],
-                            "id": "americano"
+                            "item": "americano"
                         },
                         {
                             "name": "Cappucino",
                             "price": 3.05,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "cappucino"
+                            "item": "cappucino"
                         },
                         {
                             "name": "Espresso",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "espresso"
+                            "item": "espresso"
                         },
                         {
                             "name": "Macchiato",
                             "price": 3.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "macchiato"
+                            "item": "macchiato"
                         }
                     ]
                 },
@@ -671,31 +677,31 @@
                             "name": "Iced Latte",
                             "price": 2.95,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-latte"
+                            "item": "iced-latte"
                         },
                         {
                             "name": "Iced Mocha",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-mocha"
+                            "item": "iced-mocha"
                         },
                         {
                             "name": "Iced Chai",
                             "price": 3.05,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "iced-chai"
+                            "item": "iced-chai"
                         },
                         {
                             "name": "Iced Coffee",
                             "price": 2.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": ""
+                            "item": ""
                         },
                         {
                             "name": "Frappe",
                             "price": 3.50,
                             "options": ["milkType", "size", "quantity", "decaf"],
-                            "id": "frappe"
+                            "item": "frappe"
                         }
                     ]
                 },
@@ -708,31 +714,31 @@
                             "name": "Green",
                             "price": 2.95,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "green"
+                            "item": "green"
                         },
                         {
                             "name": "Jasmine Green",
                             "price": 2.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "jasmine-green"
+                            "item": "jasmine-green"
                         },
                         {
                             "name": "Chai",
                             "price": 3.05,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "chai"
+                            "item": "chai"
                         },
                         {
                             "name": "Mint",
                             "price": 2.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "mint"
+                            "item": "mint"
                         },
                         {
                             "name": "Chamomile",
                             "price": 3.50,
                             "options": ["size", "quantity", "hotOrCold"],
-                            "id": "chamomile"
+                            "item": "chamomile"
                         }
                     ]
                 },
@@ -745,31 +751,31 @@
                             "name": "Croissant",
                             "price": 2.95,
                             "options": ["quantity"],
-                            "id": "croissant"
+                            "item": "croissant"
                         },
                         {
                             "name": "Banana Muffin",
                             "price": 2.50,
                             "options": ["quantity"],
-                            "id": "banana-muffin"
+                            "item": "banana-muffin"
                         },
                         {
                             "name": "Blueberry Scone",
                             "price": 3.05,
                             "options": ["quantity"],
-                            "id": "blueberry-scone"
+                            "item": "blueberry-scone"
                         },
                         {
                             "name": "Carrot Cake",
                             "price": 2.50,
                             "options": ["quantity"],
-                            "id": "carrot-cake"
+                            "item": "carrot-cake"
                         },
                         {
                             "name": "Home-Made Cookies",
                             "price": 3.50,
                             "options": ["quantity"],
-                            "id": "home-made-cookies"
+                            "item": "home-made-cookies"
                         }
                     ]
                 }

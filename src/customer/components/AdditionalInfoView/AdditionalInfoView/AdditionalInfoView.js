@@ -10,6 +10,7 @@ import '../../App/app.scss';
 import './additional-info-view.scss';
 import request from 'superagent';
 import _ from 'lodash';
+import cookie from 'js-cookie';
 
 var AdditionalInfoView = React.createClass({
 
@@ -75,6 +76,11 @@ var AdditionalInfoView = React.createClass({
             favoriteOrders: [],
             menuShow: false,
         }
+    },
+    componentWillMount(){
+
+        cookie.set("items" , this.props.location.state.items )
+
     },
 
     toggleAdditionalInfoNotification: function () {
