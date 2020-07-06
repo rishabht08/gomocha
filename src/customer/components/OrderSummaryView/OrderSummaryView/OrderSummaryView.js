@@ -133,7 +133,7 @@ var OrderSummaryView = React.createClass({
             "isPaymentReceived": false,
             "isDelivered": false,
             "noOfSeatsRequested": parseInt(cookie.get("seatNumber")),
-            "username": cookie.get("username"),
+            "userName": cookie.get("username"),
             "orders" : arr
         }
 

@@ -67,7 +67,12 @@ var DashboardView = React.createClass({
                   })
                   
             }else if('Take away!'){
-                window.location.href = "/custom-order"
+                axios.get("http://13.127.237.253:5000/api/v1/info").then(res=>{
+                    cookie.set('dining', res.data.data.details[2])
+                    window.location.href = "/custom-order"
+
+                })
+              
             }
           })
     },
