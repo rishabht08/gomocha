@@ -5,7 +5,7 @@ import SelectPickUpTime from '../SelectPickUpTime/SelectPickUpTime';
 import SelectIfFavorite from '../SelectIfFavorite/SelectIfFavorite';
 import EnterPaymentInfo from '../EnterPaymentInfo/EnterPaymentInfo';
 import AdditionalInfoNotification from '../AdditionalInfoNotification/AdditionalInfoNotification';
-import Footer from '../../DashboardView/Footer/Footer';
+// import Footer from '../../DashboardView/Footer/Footer';
 import '../../App/app.scss';
 import './additional-info-view.scss';
 import request from 'superagent';
@@ -246,7 +246,7 @@ var AdditionalInfoView = React.createClass({
                         {nextButton}
                     </div>
                 </div>
-                <Footer />
+                {/* <Footer /> */}
             </div>
         )
     }

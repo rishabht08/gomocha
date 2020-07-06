@@ -20,14 +20,19 @@
     text-align: center;
     padding: 0.75em 0.75em 1em 0.75em;
     border: 1px solid #E4E4E4;
-    border-radius: 3px;
+    border-radius: 8px;
     background: #fff;
-    box-shadow: #999999 0px 1px;
+    // box-shadow: #999999 0px 1px;
+    border-style: none;
+    box-shadow: 0 0 20px 0 rgba(50, 56, 66, 0.1);
+
+
+
 
     h2 {
         font-size: 1.2em;
         text-align: left;
-        color: #333;
+        color: #071a52;
     }
 
     p {
@@ -62,8 +67,8 @@ input.method-of-trans-input {
     margin: 10px;
 
     &:checked + label {
-        background: #3FB083;
-        border: 2px solid #3FB083;
+        background: #071a52;
+        border: 2px solid #071a52;
         color: #fff;
     }
 }

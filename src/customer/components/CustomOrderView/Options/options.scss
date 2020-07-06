@@ -26,15 +26,15 @@
 
     .add-to-order {
         color: #fff;
-        background: #3FB083;
+        background: #071a52;
         margin-left: 1em;
-        border-radius: 3px;
+        border-radius: 8px;
         font-size: 0.9em;
         padding: 0.6em 0.9em;
 
         &:hover {
             cursor: pointer;
-            background: lighten(#3FB083, 7%);
+            background: lighten(#102359, 7%);
         }
     }
 }

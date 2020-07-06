@@ -37,7 +37,7 @@
     .userProgress {
         position: relative;
         width: 100%;
-        height: 30px;
+        height: 20px;
         background-color: #fff;
         border-radius: 5px;
         margin: 0 auto;
@@ -61,7 +61,7 @@
 @media only screen and (min-width: 600px) {
     .select-shop-container {
         .userProgress {
-            width: 25em;
+            width: 20em;
         }
     }
 }

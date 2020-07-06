@@ -1,7 +1,7 @@
 import React from 'react';
 import OrderTotal from '../../CustomOrderView/OrderTotal/OrderTotal';
 import SpecialInstructionsOS from '../SpecialInstructionsOS/SpecialInstructionsOS';
-import Footer from '../../DashboardView/Footer/Footer';
+// import Footer from '../../DashboardView/Footer/Footer';
 import { Link } from 'react-router';
 import '../../App/app.scss';
 import './order-summary.scss';
@@ -19,6 +19,7 @@ var OrderSummaryView = React.createClass({
     //     specialInstructions: React.PropTypes.string,
     //     handleOrderSubmit: React.PropTypes.func
     // },
+
     getInitialState: function () {
         return {
             username: '',
@@ -189,7 +190,7 @@ var OrderSummaryView = React.createClass({
                 </Link>
             </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
         )
     }

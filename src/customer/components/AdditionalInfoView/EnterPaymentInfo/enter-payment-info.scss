@@ -1,6 +1,6 @@
 .enter-payment-info-container {
     h2 {
-        color: #333;
+        color: #071a52;
     }
 }
 
@@ -9,16 +9,16 @@
 
     p {
         margin: 0.5em 0 0.5em 0;
-        color: #333;
+        color: #071a52;
     }
 }
 
 .payment-name, .payment-card-number {
     input {
-        width: 18em;
+        width: 27em;
         padding: 0.5em;
         display: block;
-        border-radius: 3px;
+        border-radius: 8px;
         border: 1px solid #A6A6A6;
 
         &:focus {
@@ -35,7 +35,7 @@
         -moz-appearance: none;
         appearance: none;
         padding: 0.5em;
-        border-radius: 3px;
+        border-radius: 8px;
 
         &:hover {
             cursor: pointer;
@@ -74,7 +74,7 @@
         width: 28em;
         margin: 0 auto 1em auto;
     }
-
+   
 }
 
 @media only screen and (max-width: 599px) {
@@ -82,13 +82,23 @@
         width: 90%;
         margin: 0 auto 1em auto;
     }
+     .payment-name, .payment-card-number {
+        input {
+            width: 18em;
+        }
+    }
+    
 
 }
 
 .enter-payment-info-container {
     padding: 0.75em;
     border: 1px solid #E4E4E4;
-    border-radius: 3px;
+    border-radius: 8px;
     background: #fff;
-    box-shadow: #999999 0px 1px;
+    // box-shadow: #999999 0px 1px;
+    border-style: none;
+    box-shadow: 0 0 20px 0 rgba(50, 56, 66, 0.1);
+
+
 }

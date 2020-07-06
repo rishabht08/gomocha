@@ -1,10 +1,11 @@
 .dashboard-container {
     margin-left: 0em;
-    margin-top: 4em;
+    margin-top: 8em;
 
     .title-cover {
         h1 {
-            color: #333333;
+            color: #071a52;
+            
         }
     }
 
@@ -14,15 +15,16 @@
         margin: 1em auto 3em auto;
 
         button.start-button {
-            background: #3FB083;
+            background: #c5a51f;
             margin: 0em;
-            padding: 1.5em 3em;
+            padding: 0.5em 3em;
             font-size: 1.75em;
 
             &:hover {
-                background: lighten(#3FB083, 3%);
+                background: lighten(#d0b02a, 3%);
             }
         }
+        
 
         .fa-coffee {
             margin-right: 0.35em;
@@ -40,7 +42,7 @@
         text-align: center;
         margin-top: 2em;
         margin-bottom: 2em;
-        color: #333333;
+        color: #071a52;
     }
 }
 
@@ -103,7 +105,7 @@
 
 @media only screen and (min-width: 960px) {
     .dashboard-container {
-        margin-top: 0em;
+        margin-top: 6em;
         margin-left: 5em;
     }
 }

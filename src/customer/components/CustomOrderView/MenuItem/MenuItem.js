@@ -120,6 +120,11 @@ var MenuItem = React.createClass({
                     {/* AddToOrderButton */}
                 </div>
 
+                <div className="item-image" style={{ position: 'relative'}}>
+                     <img src="https://image.flaticon.com/icons/png/512/242/242452.png" style={{height: '5em', width: '5em', margin: '0 8em', cursor: 'pointer'}}/>
+                </div>
+
+
                 <div className="item-top-row">
 
                     <div className="item-options">

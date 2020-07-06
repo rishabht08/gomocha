@@ -1,8 +1,10 @@
 #order-total {
-    box-shadow: #999999 0px 1px;
+    // box-shadow: #999999 0px 1px;
+    margin: 0 10px;
+
     h2 {
         text-align: left;
-        color: #333333;
+        color: #071a52;
     }
 }
 
@@ -14,15 +16,16 @@
 .order-total-table {
     margin: 0 auto;
     width: 100%;
-    border: 1px solid #E4E4E4;
+    // border: 1px solid #E4E4E4;
     background: #fff;
     border-collapse: collapse;
+    border-radius: 8px;
 }
 
 @media only screen and (min-width: 600px) {
     #order-total {
         max-width: 28em;
-        margin: 0 auto;
+        // margin: 0 10px;
     }
 
 }

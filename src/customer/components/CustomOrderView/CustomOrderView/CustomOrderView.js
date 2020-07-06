@@ -3,7 +3,7 @@ import MenuFormContainer from '../MenuFormContainer/MenuFormContainer';
 import OrderTotal from '../OrderTotal/OrderTotal';
 import AddItemNotification from '../AddItemNotification/AddItemNotification';
 import SpecialInstructions from '../SpecialInstructions/SpecialInstructions';
-import Footer from '../../DashboardView/Footer/Footer';
+// import Footer from '../../DashboardView/Footer/Footer';
 import { Link } from 'react-router';
 import '../../App/app.scss';
 import './custom-order-view.scss';
@@ -224,7 +224,7 @@ var CustomOrderView = React.createClass({
                             {nextButton}
                     </div>
                  </div>
-                 <Footer />
+                 {/* <Footer /> */}
              </div>
         )
     }

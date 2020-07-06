@@ -532,7 +532,7 @@ var App = React.createClass({
                                 <i className={this.state.menuShow ? 'fa fa-times fa-2x' : 'fa fa-bars fa-2x'} aria-hidden="true"></i>
                             </div>
                             <div className="top-nav-logo">
-                                <img src="/img/gomocha-logo-sml.png" />
+                                {/* <img src="/img/gomocha-logo-sml.png" /> */}
                             </div>
                             <ul className={this.state.menuShow ? 'menu-show' : 'menu-hide'}>
                                 <Link to="/" onlyActiveOnIndex={true} className='router-link'>
@@ -550,11 +550,11 @@ var App = React.createClass({
                             </ul>
                         </nav>
                         <nav className="side-nav">
-                            <Link to="/" onlyActiveOnIndex={true} className='router-link'>
+                            {/* <Link to="/" onlyActiveOnIndex={true} className='router-link'>
                                 <div className="side-nav-logo">
                                     <img src="/img/gomocha-logo-sml.png" />
                                 </div>
-                            </Link>
+                            </Link> */}
                             <Link to="/" onlyActiveOnIndex={true} className='router-link'>
                                 <i className="fa fa-home fa-2x" aria-hidden="true"></i>
                             </Link>
