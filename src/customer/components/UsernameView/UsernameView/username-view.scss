@@ -230,7 +230,7 @@
     .title-cover-landing {
         background-image: url("/img/cover-image-05.jpg");
         padding: 7em;
-        opacity: 100%;
+        opacity: 100% !important;
 
         .title-cover-left {
             display: inline-block;
