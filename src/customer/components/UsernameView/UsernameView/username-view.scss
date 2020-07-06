@@ -36,7 +36,7 @@
 
     // background-color: #41B486;
     // background: #3879D9;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding: 2em;
@@ -230,6 +230,7 @@
     .title-cover-landing {
         background-image: url("/img/cover-image-05.jpg");
         padding: 7em;
+        opacity: 100%;
 
         .title-cover-left {
             display: inline-block;
