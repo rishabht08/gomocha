@@ -134,12 +134,15 @@ var OrderSummaryView = React.createClass({
             "isDelivered": false,
             "noOfSeatsRequested": parseInt(cookie.get("seatNumber")),
             "userName": cookie.get("username"),
-            "orders" : arr
+            "orders" : arr,
+            "noOfSeatsRequested": 1 + Math.floor(Math.random() * 25),
+            "orderType": cookie.get("type")
+
         }
 
-        axios.post("http://13.127.237.253:5000/api/v1/customer-order/create-order" , data).then(res=>{
+        axios.post("http://13.233.233.253:5000/api/v1/customer-order/create-order" , data).then(res=>{
             console.log("afeter submit" , res)
-            window.location.href = "/confirmation"
+            window.location.href = `/${this.props.params.id}/confirmation`
         })
 
         this._handleStateClear();
@@ -195,7 +198,7 @@ var OrderSummaryView = React.createClass({
                     </button>
                 </div>
 
-                <Link to="/custom-order">
+                <Link to={`/${this.props.params.id}/custom-order`}>
                     <button className="next-button order-summary-edit-button">
                         Edit my order
                         <i className="fa fa-pencil fa-lg" aria-hidden="true"></i>

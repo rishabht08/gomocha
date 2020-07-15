@@ -77,9 +77,9 @@ var AdditionalInfoView = React.createClass({
             menuShow: false,
         }
     },
-    componentWillMount(){
+    componentWillMount() {
 
-        cookie.set("items" , this.props.location.state.items )
+        cookie.set("items", this.props.location.state.items)
 
     },
 
@@ -189,32 +189,32 @@ var AdditionalInfoView = React.createClass({
         })
     },
 
-    render: function() {
+    render: function () {
 
-        console.log("addad" , this.props)
+        console.log("addad", this.props)
 
         var nextButton;
         if (this.state.pickupTime === true && this.state.methodOfTrans) {
-            nextButton = <Link to={{pathname:"/order-summary", state: { items: this.props.location.state.items }}}>
-                            <button className="next-button">
-                                Next
+            nextButton = <Link to={{ pathname: `/${this.props.params.id}/order-summary`, state: { items: this.props.location.state.items } }}>
+                <button className="next-button s-align">
+                    Next
                                 <i className="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
-                            </button>
-                        </Link>
+                </button>
+            </Link>
         } else if (this.state.pickupTime !== true) {
-            nextButton = <Link to={{pathname:"/order-summary", state: { items: this.props.location.state.items }}}>
-                            <button className="next-button">
-                                Next
+            nextButton = <Link to={{ pathname: `/${this.props.params.id}/order-summary`, state: { items: this.props.location.state.items } }}>
+                <button className="next-button s-align">
+                    Next
                                 <i className="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
-                            </button>
-                        </Link>
+                </button>
+            </Link>
         } else {
             nextButton = <button
-                            onClick={this.toggleAdditionalInfoNotification}
-                            className="next-button">
-                            Next
+                onClick={this.toggleAdditionalInfoNotification}
+                className="next-button s-align">
+                Next
                             <i className="fa fa-arrow-right fa-lg" aria-hidden="true"></i>
-                        </button>
+            </button>
         }
 
         return (
@@ -239,14 +239,15 @@ var AdditionalInfoView = React.createClass({
                         <SelectIfFavorite
                             handleFavorite={this.handleFavorite}
                             value={this.state.favorite || false} />
-                        <EnterPaymentInfo
-                            handleCCName={this.handleCCName}
-                            handleCCNumber={this.handleCCNumber}
-                            handleCCExpMonth={this.handleCCExpMonth}
-                            expMonthValue={this.state.expMonth || 'default'}
-                            handleCCExpYear={this.handleCCExpYear}
-                            expYearValue={this.state.expYear || 'default'}
-                            handleCCCVV={this.handleCCCVV} />
+                        {cookie.get("type") == "Take Away" ?
+                            <EnterPaymentInfo
+                                handleCCName={this.handleCCName}
+                                handleCCNumber={this.handleCCNumber}
+                                handleCCExpMonth={this.handleCCExpMonth}
+                                expMonthValue={this.state.expMonth || 'default'}
+                                handleCCExpYear={this.handleCCExpYear}
+                                expYearValue={this.state.expYear || 'default'}
+                                handleCCCVV={this.handleCCCVV} /> : <div></div>}
                     </form>
                     <div className="next-button-container">
                         {nextButton}

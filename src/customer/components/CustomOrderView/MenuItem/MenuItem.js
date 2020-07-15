@@ -134,7 +134,7 @@ var MenuItem = React.createClass({
                     </div>
                     {/* Price */}
                     <div className="item-price">
-                        ${this.props.price.toFixed(2)}
+                        Rs.{this.props.price.toFixed(1)}
                     </div>
                 </div>
 

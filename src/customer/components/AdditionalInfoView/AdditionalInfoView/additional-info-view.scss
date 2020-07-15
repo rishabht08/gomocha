@@ -36,11 +36,18 @@
     overflow-x: hidden;
 }
 
+.s-align{
+    margin: 1em 5em 0 0;
+}
+
 @media only screen and (min-width: 600px) {
     .additional-info-container {
         .userProgress {
             width: 20em;
         }
+    }
+    .s-align {
+        margin: 1em 0em 0 0;
     }
 }
 
@@ -49,11 +56,17 @@
         margin-left: 0em;
         margin-top: 4em;
     }
+    .s-align {
+        margin: 1em 0em 0 0;
+    }
 }
 
 @media only screen and (min-width: 960px) {
     .additional-info-container {
         margin-top: 0em;
         margin-left: 5em;
+    }
+    .s-align {
+        margin: 1em 0em 0 0;
     }
 }

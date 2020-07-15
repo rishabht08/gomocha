@@ -1,6 +1,7 @@
 import React from 'react';
 import ShopList from '../ShopList/ShopList';
 // import Footer from '../../DashboardView/Footer/Footer';
+import shops from "../../../../dummy-shop-data.json";
 import { Link } from 'react-router';
 import '../../App/app.scss';
 import './select-shop-view.scss';
@@ -12,6 +13,22 @@ var SelectShopView = React.createClass({
         shops: React.PropTypes.arrayOf(React.PropTypes.object),
         handleSelectedShop: React.PropTypes.func,
         notification: React.PropTypes.object
+    },
+    getInitialState: function () {
+        return{
+
+            shop:null
+
+        }
+    },
+
+    componentWillMount(){
+
+        const shopIndex = Math.floor(Math.random() * shops.length); 
+        this.setState({
+            shop:shops[shopIndex]
+        })
+
     },
 
     render: function () {
@@ -51,7 +68,8 @@ var SelectShopView = React.createClass({
                 </div> */}
 
                 <div className="random" style={{width:"100%" , "text-align":"center" , "marginTop":"2%"}}>
-                    <QRCode value="https://gomocha.netlify.app" size={700} />
+                    {/* <QRCode value="http://13.233.233.253/" size={700} /> */}
+                    <QRCode value={`https://scankar.netlify.app/${this.state.shop.id}`} size={700} />
                 </div>
 
                 {/* <div className="main-wrap">

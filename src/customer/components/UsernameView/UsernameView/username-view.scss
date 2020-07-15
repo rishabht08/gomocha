@@ -42,7 +42,7 @@
     padding: 2em;
     min-height: 7em;
     height: 42em;
-    opacity: 90%;
+    opacity: 0.9 !important;
    
 
     // margin-bottom: 3em;
@@ -231,7 +231,7 @@
     .title-cover-landing {
         background-image: url("/img/cover-image-05.jpg");
         padding: 7em;
-        opacity: 1 !important;
+        opacity: 1.0 !important;
 
         .title-cover-left {
             display: inline-block;

@@ -14,7 +14,7 @@ var ShopListItem = React.createClass({
         return (
             <div className="shop-list-item-container"
                 onClick={() => this.props.handleSelectedShop(this.props.shop)} >
-                <Link to="/custom-order">
+                <Link to="/${this.props.params.id}/custom-order">
                     <div className="shop-list-item-details">
                         <h2>{this.props.shop.name}</h2>
                         <p>{this.props.shop.vicinity}</p>

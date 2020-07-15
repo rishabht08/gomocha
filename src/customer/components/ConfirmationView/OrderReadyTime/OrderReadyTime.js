@@ -1,5 +1,6 @@
 import React from 'react';
 import './order-ready-time.scss';
+import cookie from 'js-cookie';
 
 var OrderReadyTime = React.createClass({
 
@@ -14,13 +15,18 @@ var OrderReadyTime = React.createClass({
     },
 
     render: function () {
+        let type = cookie.get("type")
 
         var pickupTime;
         if (this.props.pickupTime === true) {
             pickupTime = <div className="order-ready-time-container">
-                <h2 className="order-ready-time-pickup">Head to the shop,
-                and your order will be ready when you get there!
-                </h2>
+                {type=="Dining" ? 
+                <h2 className="order-ready-time-pickup">Your order is being prepared, 
+                and we will serve you soon at your table!
+                </h2> : 
+                 <h2 className="order-ready-time-pickup">Your order is being prepared, 
+                 Pick it up after 20 Minutes!
+                 </h2>}
             </div>
         } else {
             pickupTime = <div className="order-ready-time-container">

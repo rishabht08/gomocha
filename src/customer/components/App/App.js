@@ -60,6 +60,9 @@ var App = React.createClass({
     // Calls the getLocation function which returns the user's current location
     // and passes it to its callback (_handleGetLocation)
     componentWillMount: function () {
+        console.log("idddd" , this.props.params.id)
+
+        this.getShopDetails(dummyShopData)
         // api.getLocation(this._handleUserLocation, this._handleGetLocation);
         this._handleCoffeeShopDummyState(dummyShopData);
 
@@ -67,6 +70,22 @@ var App = React.createClass({
         setTimeout(() => {
             this._handleUserLocationCheck();
         }, 8000);
+    },
+
+    getShopDetails : function (data){
+
+        let idArr =  this.props.params.id.split("")
+        let id = idArr.slice(idArr.length -4  , idArr.length).join("") == "take" ? idArr.splice(0 , idArr.length-4).join("") : idArr.join("")
+        let type = idArr.slice(idArr.length -4  , idArr.length).join("") == "take" ? "Take Away" : "Dining"
+        cookie.set("type", type)
+       
+        let shop = data.filter(item=>{
+            return item.id == id
+        })
+
+        cookie.set("shopDetails" , shop)
+        
+
     },
 
     _handleUserLocationCheck: function () {
@@ -535,37 +554,37 @@ var App = React.createClass({
                                 {/* <img src="/img/gomocha-logo-sml.png" /> */}
                             </div>
                             <ul className={this.state.menuShow ? 'menu-show' : 'menu-hide'}>
-                                <Link to="/" onlyActiveOnIndex={true} className='router-link'>
+                                <Link to={`/${this.props.params.id}`} onlyActiveOnIndex={true} className='router-link'>
                                     <li onClick={() => { this._handleMenuToggle() }}>Dashboard</li>
                                 </Link>
-                                <Link to="/previous-orders" className="prev-orders-link">
+                                <Link to={`/${this.props.params.id}/previous-orders`}  className="prev-orders-link">
                                     <li onClick={() => { this._handleMenuToggle() }}>Previous Orders</li>
                                 </Link>
-                                <Link to="favorite-orders" className="fav-orders-link">
+                                <Link to="/${this.props.params.id}favorite-orders" className="fav-orders-link">
                                     <li onClick={() => { this._handleMenuToggle() }}>Favorite Orders</li>
                                 </Link>
-                                <Link to="/" className='router-link' onClick={this._handleUsernameRemove}>
+                                <Link to={`/${this.props.params.id}`} className='router-link' onClick={this._handleUsernameRemove}>
                                     <li className="sign-out" onClick={() => { this._handleMenuToggle() }}>Sign Out</li>
                                 </Link>
                             </ul>
                         </nav>
                         <nav className="side-nav">
-                            {/* <Link to="/" onlyActiveOnIndex={true} className='router-link'>
+                            {/* <Link to="/${this.props.params.id}/" onlyActiveOnIndex={true} className='router-link'>
                                 <div className="side-nav-logo">
                                     <img src="/img/gomocha-logo-sml.png" />
                                 </div>
                             </Link> */}
-                            <Link to="/" onlyActiveOnIndex={true} className='router-link'>
+                            <Link to={`/${this.props.params.id}`}  onlyActiveOnIndex={true} className='router-link'>
                                 <i className="fa fa-home fa-2x" aria-hidden="true"></i>
                             </Link>
-                            <Link to="/previous-orders" className="prev-orders-link">
+                            <Link to={`/${this.props.params.id}/previous-orders`} className="prev-orders-link">
                                 <i className="fa fa-clock-o fa-2x"></i>
                             </Link>
-                            <Link to="favorite-orders" className="fav-orders-link">
+                            <Link to="/${this.props.params.id}favorite-orders" className="fav-orders-link">
                                 <i className="fa fa-heart fa-2x"></i>
                             </Link>
                             <div className="side-nav-divider"></div>
-                            <Link to="/" className='router-link' onClick={this._handleUsernameRemove}><i className="fa fa-sign-out fa-2x" aria-hidden="true"></i></Link>
+                            <Link to="/${this.props.params.id}/" className='router-link' onClick={this._handleUsernameRemove}><i className="fa fa-sign-out fa-2x" aria-hidden="true"></i></Link>
                         </nav>
 
                         {React.cloneElement(this.props.children,

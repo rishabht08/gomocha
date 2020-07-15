@@ -98,7 +98,7 @@ var ConfirmationView = React.createClass({
                     userLocation={this.state.userLocation}
                     selectedShopLocation="San Francisco" />
                 </div>
-                    <Link to="/" className="back-to-dashboard">
+                    <Link to={`/${this.props.params.id}/`} className="back-to-dashboard">
                         <button className="next-button">
                             Dashboard
                             <i className="fa fa-home fa-lg" aria-hidden="true"></i>

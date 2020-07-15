@@ -183,7 +183,7 @@ var CustomOrderView = React.createClass({
         var nextButton;
         
         if (this.state.items.length > 0) {
-            nextButton = <Link to={{pathname:"/additional-info", state: { items: this.state.items }}} >
+            nextButton = <Link to={{pathname:cookie.get("type")=="Take Away"?`/${this.props.params.id}/additional-info`:`/${this.props.params.id}/order-summary`, state: { items: this.state.items }}} >
                             <button className="next-button">
                                 Next
                                 <i className="fa fa-arrow-right fa-lg" aria-hidden="true"></i>

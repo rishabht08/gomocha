@@ -61,7 +61,7 @@ var OrderTotalRow = React.createClass({
                         </p>
                     </td>
                     <td className='td-price'>
-                        ${(price * quantity).toFixed(2)}
+                        Rs. {(price * quantity).toFixed(2)}
                         <span
                             title='Delete item from order'
                             onClick={this._handleDeleteItem}

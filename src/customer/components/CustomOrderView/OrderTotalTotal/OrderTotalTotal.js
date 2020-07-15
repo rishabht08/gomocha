@@ -12,7 +12,7 @@ var OrderTotalTotal = React.createClass({
         return (
                 <tr>
                     <td className="order-total-total">Total</td>
-                    <td>${this.props.orderTotal}</td>
+                    <td>Rs. {this.props.orderTotal}</td>
                 </tr>
         )
     }
